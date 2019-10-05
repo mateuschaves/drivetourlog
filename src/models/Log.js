@@ -10,7 +10,7 @@ const LogSchema = new mongoose.Schema({
     required: true
   },
   androidId: String,
-  andoirdApiLevel: Number,
+  androidApiLevel: Number,
   LocationEnable: Boolean,
   PowerState: {
     batteryLevel: Number,

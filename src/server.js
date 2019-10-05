@@ -18,6 +18,11 @@ const routes = require("./routes");
 
 app.use(routes);
 
+mongoose.connect(
+  "mongodb+srv://mateus13:zoom4444@cluster0-abjo3.mongodb.net/test?retryWrites=true&w=majority",
+  { useNewUrlParser: true }
+);
+
 app.listen(process.env.PORT, () => {
   console.log(`Server started on port ${3000}`);
 });
