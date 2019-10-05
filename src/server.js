@@ -6,6 +6,8 @@ const requireDir = require("require-dir");
 
 requireDir("./models");
 
+require("dotenv").config();
+
 app.use(bodyParser.json());
 
 app.use(cors());
@@ -16,6 +18,6 @@ const routes = require("./routes");
 
 app.use(routes);
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log(`Server started on port ${3000}`);
 });
